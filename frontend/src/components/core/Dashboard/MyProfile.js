@@ -15,9 +15,9 @@ const MyProfile = () => {
     <div >
       <h1 className='mb-14 text-3xl font-medium text-richblack-5'>My Profile</h1>
       {/* section 1 */}
-      <div className='flex items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12'>
+      <div className='flex xs:flex-col sm:flex-row items-center justify-between rounded-md border-[1px] border-richblack-700 bg-richblack-800 sm:p-8 sm:px-12 xs:p-2 xs:px-4'>
         <div className='flex items-center gap-x-4'>
-            <img src={`${user?.image}`} alt={`profile-${user?.firstName}`} className='aspect-square w-[78px] rounded-full object-cover' />
+            <img src={`${user?.image}`} alt={`profile-${user?.firstName}`} className='aspect-square sm:w-[78px] xs:w-[32px] rounded-full object-cover' />
             <div className='space-y-1'>
                 <p className='text-lg font-semibold text-richblack-5'>{user?.firstName+" "+user?.lastName}</p>
                 <p className='text-sm text-richblack-300'>{user?.email}</p>
@@ -53,8 +53,8 @@ const MyProfile = () => {
                 <RiEditBoxLine/>
             </IconButton>
         </div>
-        <div className='flex max-w-[500px] justify-between'>
-            <div className='flex flex-col gap-y-5'>
+        <div className='flex max-w-[500px] justify-between xs:flex-col sm:flex-row'>
+            <div className='flex flex-col gap-y-5 '>
                 <div>
                     <p className='mb-2 text-sm text-richblack-600'>First Name</p>
                     <p className='text-sm font-medium text-richblack-5'>{user?.firstName}</p>
@@ -68,7 +68,7 @@ const MyProfile = () => {
                     <p className='text-sm font-medium text-richblack-5'>{user?.additionalDetails?.gender ?? "Add Gender"}</p>
                 </div>
             </div>
-            <div className="flex flex-col gap-y-5">
+            <div className="flex flex-col gap-y-5 ">
                 <div>
                     <p className="mb-2 text-sm text-richblack-600">Last Name</p>
                     <p className='text-sm font-medium text-richblack-5'>{user?.lastName}</p>
