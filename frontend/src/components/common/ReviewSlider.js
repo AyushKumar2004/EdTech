@@ -23,7 +23,7 @@ const ReviewSlider = () => {
                 setReviews(data?.data);
             }
 
-            console.log("PRINTING REVIEWS",reviews)
+            //console.log("PRINTING REVIEWS",reviews)
         }
         fetchAllReviews();
     },[])

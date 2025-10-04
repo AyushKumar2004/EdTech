@@ -24,7 +24,7 @@ const Catalog = () => {
     useEffect(()=>{
         const getCategories=async()=>{
             const res=await apiConnector("GET",categories.CATEGORIES_API);
-            console.log("res...",res)
+            //console.log("res...",res)
             const category_id=res?.data?.data?.filter((ct)=>ct.name.split(" ").join("-").toLowerCase()===catalogName)[0]._id;
             setCategoryId(category_id);
         }
@@ -36,7 +36,7 @@ const Catalog = () => {
         const getCategoryDetails=async()=>{
             try{
                 const res=await getCatalogPageData(categoryId);
-                console.log("Printing...res...",res)
+                //console.log("Printing...res...",res)
                 setCatalogPageData(res);
             }catch(error){
                 console.log(error)

@@ -40,7 +40,7 @@ const CourseDetails = () => {
       const getCourseFullDetails=async()=>{
         try {
           const result=await fetchCourseDetails(courseId);
-          console.log("RESULT-------",result)
+          //console.log("RESULT-------",result)
           setCourseData(result);
         }catch(error){
           console.log("Could not fetch course Details")
